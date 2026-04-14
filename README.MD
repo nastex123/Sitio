@@ -6,20 +6,20 @@ Static web project built with HTML and CSS. It presents a modern startup-style w
 
 ## Project Structure
 
-/project
+project/
 │
 ├── index.html
 ├── css/
-│   ├── styles.css
-│   ├── social.css
-│   ├── services.css
-│   └── logo.jpg
+│ ├── styles.css
+│ ├── social.css
+│ ├── services.css
+│ └── logo.jpg
 │
 └── subpaginas/
-    ├── productos.html
-    ├── Historia.html
-    ├── Nuestras_redes.html
-    └── Trabajar_con_nosotros.html
+├── productos.html
+├── Historia.html
+├── Nuestras_redes.html
+└── Trabajar_con_nosotros.html
 
 ---
 
