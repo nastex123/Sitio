@@ -1,0 +1,342 @@
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-section, .timeline-section {
+    padding: 80px 20px;
+    background: rgba(168, 162, 162, 0.2);
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.social-card {
+    background: rgba(0,0,0,0.9);
+    padding: 40px 20px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 15px rgba(255,0,0,0.5);
+    transition: 0.3s;
+}
+
+.social-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(255,0,0,0.8);
+}
+
+.social-card i {
+    font-size: 4rem;
+    color: red;
+    margin-bottom: 20px;
+}
+
+
+.social-card h3,
+.social-card p,
+.social-card .social-link {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    margin: 10px 0;
+}
+
+.social-card .social-link {
+    font-size: 1.8rem;
+    margin-top: 0;
+}
+
+.social-card:hover h3,
+.social-card:hover p,
+.social-card:hover .social-link {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.social-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+
+.social-link:hover {
+    background: black;
+    color: red;
+    border: 2px solid red;
+}
+
+/* timeline */
+.timeline-section {
+    padding: 80px 20px;
+    background: #111;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 50px 0;
+    position: relative;
+}
+
+/* Línea vertical */
+.timeline-section .container {
+    position: relative;
+}
+
+.timeline-section .container::before {
+    content: '';
+    position: absolute;
+    left: 50px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: red;
+}
+
+/*  año */
+.timeline-year {
+    min-width: 100px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: red;
+    z-index: 1;
+}
+
+/* Punto */
+.timeline-year::after {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: red;
+    border-radius: 10%;
+    margin: 10px auto 0;
+}
+
+/* contenido */
+.timeline-content {
+    background: rgba(0,0,0,0.9);
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(255,0,0,0.3);
+    flex: 1;
+    transition: all 0.3s ease;
+}
+
+/* Texto */
+.timeline-content h3 {
+    margin-top: 0;
+    color: white;
+}
+
+.timeline-content p {
+    color: rgba(255,255,255,0.8);
+}
+
+.timeline-item:hover .timeline-content {
+    background: red;
+    transform: translateX(10px);
+}
+
+.timeline-item:hover .timeline-content h3,
+.timeline-item:hover .timeline-content p {
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timeline-section .container::before {
+        left: 20px;
+    }
+
+    .timeline-year {
+        text-align: left;
+    }
+}
+
+
+/* seccion general */
+.careers-section {
+    padding: 60px 20px;
+    background: #111;
+    color: white;
+}
+
+/* Contenedor */
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Título */
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: white;
+}
+
+/* grid de trabajos */
+.jobs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* Tarjeta */
+.job-card {
+    background: black;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(255,0,0,0.4);
+    transition: 0.3s ease;
+}
+
+/* Hover */
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(255,0,0,0.7);
+}
+
+/* Título card */
+.job-card h3 {
+    margin-top: 0;
+    color: red;
+}
+
+/* Lista */
+.job-card ul {
+    padding-left: 20px;
+}
+
+.job-card li {
+    margin-bottom: 8px;
+    color: rgba(255,255,255,0.8);
+}
+
+/* Botón aplicar */
+.job-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    border: 1px solid red;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.job-link:hover {
+    background: red;
+    color: black;
+}
+
+/* formulario */
+.apply-section {
+    margin-top: 60px;
+    padding: 30px;
+    background: black;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(255,0,0,0.4);
+}
+
+/* Título */
+.apply-section h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form */
+.apply-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Grupo */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label */
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Inputs */
+.apply-form input,
+.apply-form select,
+.apply-form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid red;
+    background: #111;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Placeholder */
+.apply-form input::placeholder,
+.apply-form textarea::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+/* Focus */
+.apply-form input:focus,
+.apply-form select:focus,
+.apply-form textarea:focus {
+    box-shadow: 0 0 10px red;
+}
+
+/* Textarea */
+.apply-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Botón */
+.apply-form button {
+    padding: 12px;
+    border: none;
+    background: red;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.apply-form button:hover {
+    background: black;
+    color: red;
+    border: 1px solid red;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 28px;
+    }
+
+    .apply-section {
+        padding: 20px;
+    }
+}
